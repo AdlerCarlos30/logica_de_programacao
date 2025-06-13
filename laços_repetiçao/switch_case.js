@@ -1,4 +1,4 @@
-var dia = "quarta";
+var dia = "sexta";
 
 switch (dia) {
     case "segunda":
