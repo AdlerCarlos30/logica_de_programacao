@@ -8,6 +8,7 @@ adicionarItem(itens);
 console.log(itens); // ["Item 1", "Item 2", "Novo Item"]
 
 
+
 function saudacao(nome = "Visitante") {
     console.log(`Olá, ${nome}!`);
 
@@ -15,6 +16,7 @@ function saudacao(nome = "Visitante") {
 
 saudacao(); // Olá, Visitante!
 saudacao("Adler Carlos"); //Ola, Adler Carlos!
+
 
 
 function dobrar(num) {
