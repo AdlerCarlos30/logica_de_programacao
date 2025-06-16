@@ -1,4 +1,9 @@
-function dobrar(num) {
+function saudacao(nome) {
+    return
+}
+
+
+/*function dobrar(num) {
     valor = num * 2;
     return num;
 
@@ -6,4 +11,4 @@ function dobrar(num) {
 
 var valor = 10;
 console.log(dobrar(valor)); //20
-console.log(valor); // 10 (valor original nao mudou)
+console.log(valor); // 10 (valor original nao mudou)*/
