@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+        function trocaImagem() {
+            var elemento=document.getElementById("myimage");
+            if (elemento.src.match("bulbon"))
+                    {elemento.src="pic_bulboff.gif";
+            } else {
+                  elemento.src="pic_bulbon.gif";
+            }
+        }
+    </script>
+
+    <p><img id="myimage" onclick="trocaImagem()"
+                        src="pic_bulboff.gif" width=100 height=180></p>
+                    <p>Clique na lâmpada para ligar/desligar a luz</p>
+
+</head>
+<body>
