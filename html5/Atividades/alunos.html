@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>Cadastro de Alunos</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,10 +37,10 @@
     <label>Idade:</label>
     <input type="number" id="idade" />
 
-    <label>Curso</label>
+    <label>Curso:</label>
     <input type="text" id="curso" />
 
-    <button>Cadastrar Aluno</button>
+    <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
 
     <h2>Alunos Cadastrados:</h2>
     <ul id="lista-alunos"></ul>
@@ -47,9 +49,9 @@
         const alunos = [];
 
         function cadastrarAluno() {
-            const nome = document.getElementById(nome).value;
-            const idade = document.getElementById(idade).value;
-            const curso = document.getElementById(curso).value;
+            const nome = document.getElementById("nome").value;
+            const idade = document.getElementById("idade").value;
+            const curso = document.getElementById("curso").value;
 
             if (nome && idade && curso) {
                 const aluno = {
@@ -68,10 +70,27 @@
         }
 
         function exibirAlunos(){
+            const lista = document.getElementById("lista-alunos");
+            lista.innerHTML = "";
+
+            for (let i = 0; i < alunos.length; i++) {
+                const aluno = alunos [i];
+                const item = document.createElement ("li");
+                item.textContent = `Aluno${i + 1}: Nome: ${aluno.nome}, Idade: ${aluno.idade}, Curso: ${aluno.curso}`;
+                lista.appendChild(item);
+
+            }
+
+            function limparCampos () {
+                document.getElementById("nome").value = "";
+                document.getElementById("idade").value = "";
+                document.getElementById("curso").value = "";
+
+            }
 
         }
 
     </script>
-    
+
 </body>
 </html>
