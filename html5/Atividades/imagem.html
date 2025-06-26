@@ -12,9 +12,37 @@
             margin-top: 50px;
         }
 
+        input[type="file"] {
+            margin-top: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #444;
+        }
+
     </style>
 </head>
 <body>
+    <h1>Foto de Perfil</h1>
+
+    <input type="file" id="inputImagem" accept="image/*" />
+
+    <img id="fotoPerfil" src="" alt="Foto de Perfil" style="display: none;" />
+
+    <script>
+        const inputImagem = document.getElementById("inputImagem");
+        const fotoPerfil = document.getElementById("fotoPerfil");
+
+        inputImagem.addEventListener("change", function () {
+            const arquivo = this.files[0];
+        })
+    </script>
     
 </body>
 </html>
