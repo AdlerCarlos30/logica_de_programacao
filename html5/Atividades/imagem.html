@@ -41,7 +41,19 @@
 
         inputImagem.addEventListener("change", function () {
             const arquivo = this.files[0];
+
+            if (arquivo) {
+                const leitor = new FileReader();
+
+                leitor.onload = function (e) {
+                    fotoPerfil.src = e.target.result;
+                    fotoPerfil.style.display = "block";
+                };
+
+                leitor.readAsDataURL(arquivo);
+            }
         })
+
     </script>
     
 </body>
