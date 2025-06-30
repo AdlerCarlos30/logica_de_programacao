@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Acesso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #mensagem {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Validação de Acesso</h1>
+
+    <input type="text" id="nome" placeholder="Digite seu Nome" />
+
+    <input type="number" id="idade" placeholder="Digite sua Idade" />
+
+    <br />
+
+    <button onclick="validarAcesso()">Verificar Acesso</button>
+
+    <div id="mensagem"></div>
+
+    <script>
+        function validarAcesso() {
+            const nome = document.getElementById('nome').value.trim();
+            const idade = parseInt(document.getElementById('idade').value);
+            const mensagem = document.getElementById('mensagem');
+
+            if (nome && idade >= 18) {
+                mensagem.textContent = `Acesso Permitido, ${nome}`;
+                mensagem.style.color = 'green';
+            }
+
+            else if (nome && idade < 18) {
+                mensagem.textContent = `Acesso Negado por Idade.`;
+                mensagem.style.color = 'red';
+
+            }
+
+            else if (!nome || isNaN(idade)) {
+                mensagem.textContent = `Preencha Corretamente os Campos.`;
+                mensagem.style.color = 'yellow';
+            }
+        }
+    </script>
+    
+</body>
+</html>
